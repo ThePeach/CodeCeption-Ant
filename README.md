@@ -47,3 +47,9 @@ Depending on your project, you might want to customise some other properties:
 
 The project will halt in case the executable is not found.
 
+# Contributions are welcome
+
+Please contribute by opening an issue or by forking and issuing a Pull Request.
+
+If you want to do a Pull request, please be sure to read the following article first:
+[How to write the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request).
