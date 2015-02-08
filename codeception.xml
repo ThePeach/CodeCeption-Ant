@@ -5,7 +5,7 @@
     <property name="codeception.basedir" value="${tests.basedir}/codeception"/>
     <property name="codeception.script" value="${basedir}/vendor/bin/codecept"/>
     <property name="codeception.suites.default" value="" />
-    <property name="codeception.options.default" value="--coverage-html" />
+    <property name="codeception.options.default" value="--xml --coverage-xml --coverage-html --no-colors" />
 
     <condition property="codeception.suites" value="${codeception.suites.default}">
         <not>
@@ -31,12 +31,11 @@
         <attribute name="suites" default="${codeception.suites.default}"/>
         <attribute name="options" default="${codeception.options.default}"/>
         <sequential>
-            <echo message="run @{suites} @{options}" />
             <exec executable="${codeception.script}"
                   dir="${tests.basedir}">
                 <arg value="run" />
                 <arg value="@{suites}" />
-                <arg value="@{options}" />
+                <arg line="@{options}" />
             </exec>
         </sequential>
     </macrodef>
